@@ -21,7 +21,6 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 2s;
         }
         .gift-box {
             display: inline-block;
@@ -33,20 +32,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.2s, background 0.3s;
         }
-        .gift-box:hover {
-            transform: scale(1.1);
-            background: #ff3385;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .hidden {
-            display: none;
-        }
+        .hidden { display: none; }
     </style>
     <script>
         function openGift(giftId) {
