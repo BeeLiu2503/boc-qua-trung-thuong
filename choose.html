@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Hộp Quà</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffccff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s;
+        }
+        .gift-box {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, background 0.3s;
+        }
+        .gift-box:hover {
+            transform: scale(1.1);
+            background: #ff3385;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function openGift(giftId) {
+            document.getElementById("message").innerHTML = document.getElementById(giftId).innerHTML;
+            document.getElementById("message").classList.remove("hidden");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Chọn một hộp quà 🎁</h1>
+        <button class="gift-box" onclick="openGift('gift1')">Hộp 1 🎁</button>
+        <button class="gift-box" onclick="openGift('gift2')">Hộp 2 🎁</button>
+        <button class="gift-box" onclick="openGift('gift3')">Hộp 3 🎁</button>
+        <button class="gift-box" onclick="openGift('gift4')">Hộp 4 🎁</button>
+        <button class="gift-box" onclick="openGift('gift5')">Hộp 5 🎁</button>
+        <h2 id="message" class="hidden"></h2>
+        <div id="gift1" class="hidden">Vòng cổ 💍</div>
+        <div id="gift2" class="hidden">Gương 🪞</div>
+        <div id="gift3" class="hidden">Túi 🛍️</div>
+        <div id="gift4" class="hidden">Kẹo hoặc Ôm hôn 😘😘</div>
+        <div id="gift5" class="hidden">Chúc Pống may mắn lần sau 🤷‍♂️😁😁</div>
+    </div>
+</body>
+</html>
